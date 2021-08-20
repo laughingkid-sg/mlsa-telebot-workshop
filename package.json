@@ -1,0 +1,15 @@
+{
+  "name": "DevTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^4.4.1"
+  }
+}
