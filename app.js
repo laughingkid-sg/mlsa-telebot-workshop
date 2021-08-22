@@ -1,5 +1,6 @@
 const { Telegraf } = require("telegraf")
 const azure = require("./azure")
+require("dotenv").config()
 
 const bot = new Telegraf(process.env["BOT_TOKEN"])
 
