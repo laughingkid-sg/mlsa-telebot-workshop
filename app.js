@@ -1,6 +1,5 @@
 const { Telegraf } = require("telegraf")
 const azure = require("./azure")
-require("dotenv").config()
 
 const bot = new Telegraf(process.env["BOT_TOKEN"])
 
@@ -17,12 +16,10 @@ bot.on("message", async (ctx) => {
 
 //bot.launch()
 
-
-
 // Webhooks
 
 // Setting the webhook URL
-bot.telegram.setWebhook("https://msla-telebot-demo.azurewebsites.net")
+bot.telegram.setWebhook("https://msla-telebot-demo.azurewebsites.net/secret-path")
 
 // Starting the Bot
 bot.startWebhook("/secret-path")
