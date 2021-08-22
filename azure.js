@@ -11,7 +11,7 @@ exports.qnamaker = async (msg) => {
 
     const config = {
         method: "post",
-        url: "https://msla-telebot-demo-cs.azurewebsites.net/qnamaker/knowledgebases/" + process.env["QnA_PATH"] + "/generateAnswer",
+        url: "" + "/qnamaker/knowledgebases/" + process.env["QnA_PATH"] + "/generateAnswer",
         headers: {
             "Authorization": process.env["QnA_TOKEN"],
             "Content-type": "application/json"
