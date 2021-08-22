@@ -3,12 +3,12 @@ const { Telegraf } = require('telegraf')
 
 const bot = new Telegraf(process.env['BOT_TOKEN'])
 
-bot.start((ctx) => {
-  ctx.reply('Hi.')
+bot.start( async (ctx) => {
+    ctx.reply('Hey ' + ctx.update.message.from.first_name + "!") 
 })
 
-bot.command('status', async (ctx) => {
-    ctx.reply('ok.');
+bot.on('message', async (ctx) => {
+    ctx.reply('You said ' + ctx.update.message.text);
 })
 
 bot.launch()
