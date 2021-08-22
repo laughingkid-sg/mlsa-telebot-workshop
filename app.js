@@ -8,9 +8,9 @@ bot.start(async (ctx) => {
 })
 
 bot.on("message", async (ctx) => {
-    // ctx.reply("You said " + ctx.update.message.text)
-    azure.textanalytic(ctx.update.message.text)
-    ctx.reply(await azure.qnamaker(ctx.update.message.text))
+    ctx.reply("You said " + ctx.update.message.text)
+    // azure.textanalytic(ctx.update.message.text)
+    // ctx.reply(await azure.qnamaker(ctx.update.message.text))
 })
 
 bot.launch()
@@ -20,7 +20,7 @@ bot.launch()
 Webhooks
 
 // Setting the webhook URL
-bot.telegram.setWebhook("URL")
+bot.telegram.setWebhook("URL" + "/secret-path")
 
 // Starting the Bot
 bot.startWebhook("/secret-path")
