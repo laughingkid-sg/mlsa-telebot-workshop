@@ -30,9 +30,9 @@ exports.qnamaker = async (msg) => {
 
 exports.textanalytic = async (msg) => {
 
-    const sentimentResult = await textAnalyticsClient.analyzeSentiment([msg])
-    //console.log(sentimentResult)
-    
+    // const sentimentResult = await textAnalyticsClient.analyzeSentiment([msg])
+    console.log(sentimentResult)
+    /*
     sentimentResult.forEach(document => {
         console.log(`ID: ${document.id}`)
         console.log(`\tDocument Sentiment: ${document.sentiment}`)
@@ -45,5 +45,5 @@ exports.textanalytic = async (msg) => {
             console.log(`\t\tPositive: ${sentence.confidenceScores.positive.toFixed(2)} \tNegative: ${sentence.confidenceScores.negative.toFixed(2)} \tNeutral: ${sentence.confidenceScores.neutral.toFixed(2)}`)
         })
     })
-
+    */
 }
