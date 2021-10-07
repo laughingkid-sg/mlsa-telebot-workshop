@@ -1,17 +1,15 @@
 const { TextAnalyticsClient, AzureKeyCredential } = require("@azure/ai-text-analytics")
 const axios = require("axios")
 
-const endpoint_url = ""
+const endpoint_ta = ""
+const endpoint_qna = ""
 
-const textAnalyticsClient = new TextAnalyticsClient(
-    endpoint_url,
-    new AzureKeyCredential(process.env["TA_TOKEN"]))
-
+/*
 exports.qnamaker = async (msg) => {
 
     const config = {
         method: "post",
-        url: "" + "/qnamaker/knowledgebases/" + process.env["QnA_PATH"] + "/generateAnswer",
+        url: "https://" + endpoint_qna + ".azurewebsites.net/qnamaker/knowledgebases/" + process.env["QnA_PATH"] + "/generateAnswer",
         headers: {
             "Authorization": process.env["QnA_TOKEN"],
             "Content-type": "application/json"
@@ -26,7 +24,12 @@ exports.qnamaker = async (msg) => {
     return respond.data.answers[0].answer == "No good match found in KB."
         ? "Opps I didn't understand that 😕"
         : respond.data.answers[0].answer
-}
+}*/
+
+/*
+const textAnalyticsClient = new TextAnalyticsClient(
+    endpoint_ta,
+    new AzureKeyCredential(process.env["TA_TOKEN"]))
 
 exports.textanalytic = async (msg) => {
 
@@ -46,4 +49,4 @@ exports.textanalytic = async (msg) => {
         })
     })
 
-}
+}*/

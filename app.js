@@ -20,7 +20,7 @@ bot.launch()
 Webhooks
 
 // Setting the webhook URL
-bot.telegram.setWebhook("URL" + "/secret-path")
+bot.telegram.setWebhook("URL")
 
 // Starting the Bot
 bot.startWebhook("/secret-path")
